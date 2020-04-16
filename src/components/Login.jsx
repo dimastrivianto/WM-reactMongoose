@@ -27,7 +27,7 @@ class Login extends Component {
     render() {
         return (
             <div className="container-fluid">
-                <div className="row login">
+                <div className="row background">
                     <div className=" col-5 mx-auto my-auto card">
                         <div className="card-body">
                             <div className="border-bottom border-secondary card-title text-center">
@@ -44,7 +44,7 @@ class Login extends Component {
                                     <h4>Password</h4>
                                 </div>
                                 <input ref={(input) => {this.password = input}} type='password' className='form-control'/>
-                                <input type="submit" value="login" className="mt-3"/>
+                                <input type="submit" value="login" className="mt-3 btn btn-primary"/>
                             </form>
                         </div>
                     </div>

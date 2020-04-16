@@ -34,8 +34,8 @@ class Register extends Component {
     render() {
         return (
             <div className="container-fluid">
-                <div className="row">
-                    <div className=" col-5 mx-auto mt-5 card">
+                <div className="row background">
+                    <div className=" col-5 mx-auto my-autogit card register">
                         <div className="card-body">
                             <div className="border-bottom border-secondary card-title text-center">
                                 <h1>Register</h1>
@@ -66,7 +66,7 @@ class Register extends Component {
                                     <h4>Password</h4>
                                 </div>
                                 <input ref={(input) => {this.password = input}} type='password' className='form-control'/>
-                                <input type="submit" value="register" />
+                                <input type="submit" value="register" className="mt-3 btn btn-primary" />
                             </form>
                         </div>
                     </div>
