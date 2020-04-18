@@ -3,6 +3,9 @@ import {Route,  BrowserRouter} from 'react-router-dom'
 
 import Register from './Register'
 import Login from './Login'
+import Header from './Header'
+import Todos from './Todos'
+// import {connect} from 'react-redux'
 
 class App extends Component {
     
@@ -10,8 +13,10 @@ class App extends Component {
         return (
             <BrowserRouter>
                 <div>
+                    <Header />
+                    <Route path="/" exact component={Login} />
                     <Route path="/register" component={Register} />
-                    <Route path="/Login" component={Login} />
+                    <Route path="/todos" component={Todos} />
                 </div>
             </BrowserRouter>
         )

@@ -1,8 +1,5 @@
 div.background {
     background-image: url('https://meramuda.com/wp-content/uploads/2017/04/G1.jpg');
-    height: 100vh;
+    height: 93vh;
 }
 
-div.register {
-    height: 75vh !important;
-}

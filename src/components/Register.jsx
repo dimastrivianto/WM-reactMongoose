@@ -15,9 +15,15 @@ class Register extends Component {
 
         axios.post('/users', {username, name, age, email, password})
         .then((res) => {
+            console.log(res.data)
             //berhasil: res
-            if(res.data.errmsg){
-                return alert(res.data.errmsg)
+            if(res.data.errors || res.data.errmsg){
+                return Swal.fire({
+                    icon: 'error',
+                    title: `Something is wrong please check you data`,
+                    showConfirmButton: false,
+                    timer: 1500
+                })
             }
             Swal.fire({
                 icon: 'success',
@@ -35,7 +41,7 @@ class Register extends Component {
         return (
             <div className="container-fluid">
                 <div className="row background">
-                    <div className=" col-5 mx-auto my-autogit card register">
+                    <div className=" col-5 mx-auto my-auto card">
                         <div className="card-body">
                             <div className="border-bottom border-secondary card-title text-center">
                                 <h1>Register</h1>
