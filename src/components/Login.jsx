@@ -28,10 +28,10 @@ class Login extends Component {
                 icon: 'success',
                 title: `Welcome ${res.data.name}`,
                 showConfirmButton: false,
-                timer: 1500
+                timer: 1000
             })
             this.props.onLoginUser(res.data)
-            // console.log(res.data)
+            console.log(res.data)
         })
         .catch(err => console.log(err))
     }

@@ -8,7 +8,8 @@ export default (state = init, action) => {
         case 'LOGIN_SUCCESS' :
             return {...state, id : action.payload.id, username : action.payload.username}
         case 'LOGOUT_SUCCESS' :
-            return {...state, id : "", username : ""}
+            return {...init}
+        //pertama kali jalan saat init
         default :
             return state
     }

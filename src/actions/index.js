@@ -1,7 +1,7 @@
 export let onLoginUser = (user) => {
-    // let {_id, username} = user
+    let {_id, username} = user
 
-    // localStorage.setItem('userData', JSON.stringify({_id, username}))
+    localStorage.setItem('userData', JSON.stringify({_id, username}))
 
     return {
         type: 'LOGIN_SUCCESS',
@@ -13,8 +13,10 @@ export let onLoginUser = (user) => {
 }
 
 export let onLogoutUser = () => {
-    // localStorage.removeItem('userData')
+    localStorage.removeItem('userData')
+
     return {
         type: 'LOGOUT_SUCCESS'
     }
 }
+
