@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from '../config/axios'
 import { connect } from 'react-redux'
+import {Redirect} from 'react-router-dom'
+
 
 class Todos extends Component {
 
@@ -71,18 +73,21 @@ class Todos extends Component {
     }
 
     render() {
-        return (
-            <div className="container">
-                <h1 className="display-4 text-center">Todo List</h1>
-                <table className="table table-hover mb-5">
-                    <tbody>
-                        {this.renderList()}
-                    </tbody>
-                </table>
-                <input ref={(input) => {this.do = input}} type="text" className="form-control" placeholder="What do you want to do ?"/>
-                <button className = "btn btn-primary btn-block mt-3" onClick= {this.addTask}>Up!</button>
-            </div>
-        )
+        if(this.props.id_source){
+            return (
+                <div className="container">
+                    <h1 className="display-4 text-center">Todo List</h1>
+                    <table className="table table-hover mb-5">
+                        <tbody>
+                            {this.renderList()}
+                        </tbody>
+                    </table>
+                    <input ref={(input) => {this.do = input}} type="text" className="form-control" placeholder="What do you want to do ?"/>
+                    <button className = "btn btn-primary btn-block mt-3" onClick= {this.addTask}>Up!</button>
+                </div>
+            )
+        }
+        return <Redirect to="/login"/>
     }
 }
 

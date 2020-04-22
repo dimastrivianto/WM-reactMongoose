@@ -34,9 +34,9 @@ class App extends Component {
                 <BrowserRouter>
                     <Header />
                     <Switch>
-                        <Route path="/" exact component={Login} />
+                        <Route path="/" exact component={Todos} />
                         <Route path="/register" component={Register} />
-                        <Route path="/todos" component={Todos} />
+                        <Route path="/login" component={Login} />
                         <Route path="/profile" component={Profile} />
                         <Route path="/editprofile" component={EditProfile} />
                         <Route component={NotFound} />

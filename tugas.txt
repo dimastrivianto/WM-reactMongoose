@@ -13,7 +13,4 @@ Ada screenshot yang udah jadinya di folder ini ya
 
 Happy Weekend 😀.
 
-tanya e.preventdefault (hanya kalau submit)
-tanya, kalau tembak url sembarangan gimana caranya ngasih tau tidak ada halaman tersebut
 ask about big-O
-default switch di auth reducers

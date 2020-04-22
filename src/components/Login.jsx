@@ -19,7 +19,7 @@ class Login extends Component {
             if(res.data.err_message){
                 return Swal.fire({
                     icon: 'error',
-                    title: `Email or password is wrong`,
+                    title: res.data.err_message,
                     showConfirmButton: false,
                     timer: 1500
                 })
@@ -30,6 +30,8 @@ class Login extends Component {
                 showConfirmButton: false,
                 timer: 1000
             })
+            //let {_id,username} = res.data
+            //this.props.onLoginUser({_id, username})
             this.props.onLoginUser(res.data)
             console.log(res.data)
         })
@@ -65,7 +67,7 @@ class Login extends Component {
                 </div>
             )
         }
-        return <Redirect to="/todos"/>
+        return <Redirect to="/"/>
     }
 }
 
