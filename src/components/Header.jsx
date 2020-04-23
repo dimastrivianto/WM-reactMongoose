@@ -48,7 +48,7 @@ class Header extends Component {
                         Hello, {this.props.username}
                     </DropdownToggle>
                         <DropdownMenu right>
-                            <NavLink tag={Link} to="/tasks">
+                            <NavLink tag={Link} to="/">
                                 <DropdownItem>Tasks</DropdownItem>
                             </NavLink>
                             <NavLink tag={Link} to="/profile">
@@ -71,7 +71,7 @@ class Header extends Component {
         return (
             <div>
                 <Navbar color="light" light expand="md">
-                    <NavbarBrand className="text-success" tag={Link} to="/tasks">Todo</NavbarBrand>
+                    <NavbarBrand className="text-success" tag={Link} to="/">Todo</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         {/* memakai tanda () karena saat komponen ini dibuat kita mau function langsung di running  */}
