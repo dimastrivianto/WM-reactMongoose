@@ -15,11 +15,13 @@ class Todos extends Component {
     }
     
     getData = () => { 
-        axios.get(`/tasks/${this.props.id_source}`)
+        if(this.props._id){
+            axios.get(`/tasks/${this.props.id_source}`)
         .then((res) => {
             this.setState({tasks : res.data})
             // console.log(res.data)
         }).catch(err => console.log(err))
+        }
     }
 
     addTask = () => {
